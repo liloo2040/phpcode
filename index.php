@@ -15,26 +15,14 @@ $verb = $_SERVER['REQUEST_METHOD'];
 
 // declare GET request response and database query response
 $getRequestResponse;
-$dbQueryResponse;
 
 error_log(print_r($verb, TRUE));
 switch ($verb) {
     case 'GET':
-    		// sample GET URL
-            $url = "http://ip.jsontest.com/";
-			$getRequestResponse = file_get_contents($url);
-			
-			$link = mysqli_connect('myHost', 'myUser', 'myPassword', 'myDatabase');
-			// Check connection
-			if (mysqli_connect_errno()) {
-			  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-			} else {
-				echo 'Connected successfully';
-				$query = 'SELECT * FROM MyTable';
-				$result = mysqli_query($link, $query);
-				$dbQueryResponse = $result->fetch_assoc();
-			}
-		
+    	// sample GET URL
+        $url = "http://ip.jsontest.com/";
+	$getRequestResponse = file_get_contents($url);
+					
         break;
     default:
         throw new Exception('Method Not Supported', 405);
@@ -47,9 +35,5 @@ header('Access-Control-Allow-Headers:X-Requested-With,content-type');
 header('Access-Control-Allow-Credentials:true');
 
 echo $getRequestResponse;
-echo 'X: ' . $dbQueryResponse['xCoordinate'];
-echo 'Y: ' . $dbQueryResponse['yCoordinate'];
 fwrite(STDOUT, $getRequestResponse);
-fwrite(STDOUT, 'X: ' . $dbQueryResponse['xCoordinate']);
-fwrite(STDOUT, 'Y: ' . $dbQueryResponse['yCoordinate']);
 fclose(STDOUT);
