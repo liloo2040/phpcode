@@ -20,7 +20,7 @@ error_log(print_r($verb, TRUE));
 switch ($verb) {
     case 'GET':
     	// sample GET URL
-        $url = "http://129.157.179.180:3000/fighters/45/8/blue/liloo2040";
+        $url = "http://129.157.179.180:3000/fighters/45/4/blue/liloo2040";
 	$getRequestResponse = file_get_contents($url);
 					
         break;
