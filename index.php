@@ -23,10 +23,9 @@ switch ($verb) {
         $url = "http://129.157.179.180:3000/shield/33/45/blue/liloo2040";
 	$getRequestResponse = file_get_contents($url);			
         break;
-		for ($y= 0; $y<= 9; $y++) {
-			$url2 = "http://129.157.179.180:3000/fighters/45/4/blue/liloo2040";
-			$getRequestResponse = file_get_contents($url2);
-		}
+	$url2 = "http://129.157.179.180:3000/fighters/45/5/blue/liloo2040";
+	$getRequestResponse = file_get_contents($url2);
+	break;
     default:
         throw new Exception('Method Not Supported', 405);
 }
