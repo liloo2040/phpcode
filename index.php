@@ -22,8 +22,8 @@ switch ($verb) {
     	// sample GET URL
         $url = "http://129.157.179.180:3000/shield/33/45/blue/liloo2040";
 	$getRequestResponse = file_get_contents($url);			
-	$url2 = "http://129.157.179.180:3000/fighters/45/0/blue/liloo2040";
-	$getRequestResponse = file_get_contents($url2);
+	$url0 = "http://129.157.179.180:3000/fighters/45/0/blue/liloo2040";
+	$getRequestResponse = file_get_contents($url0);
 	break;
     default:
         throw new Exception('Method Not Supported', 405);
