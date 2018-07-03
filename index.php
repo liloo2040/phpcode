@@ -22,7 +22,7 @@ switch ($verb) {
     	// sample GET URL
         $url = "http://129.157.179.180:3000/shield/33/45/blue/liloo2040";
 	$getRequestResponse = file_get_contents($url);			
-	$url0 = "http://129.157.179.180:3000/fighters/45/0/blue/liloo2040";
+	$url0 = "http://129.157.179.180:3000/fighters/45/8/blue/liloo2040";
 	$getRequestResponse = file_get_contents($url0);
 	break;
     default:
