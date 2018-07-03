@@ -22,8 +22,8 @@ switch ($verb) {
     	// sample GET URL
         $url = "http://129.157.179.180:3000/fighters/33/45/blue/liloo2040";
 		for ($y= 0; $y<= 9; $y++) {
-			$url = "http://129.157.179.180:3000/fighters/45/4/blue/liloo2040";
-			$getRequestResponse = file_get_contents($url);
+			$url2 = "http://129.157.179.180:3000/fighters/45/4/blue/liloo2040";
+			$getRequestResponse = file_get_contents($url2);
 		}
 	$getRequestResponse = file_get_contents($url);
 					
